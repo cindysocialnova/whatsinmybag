@@ -185,7 +185,7 @@ main {
   margin-right: -2rem;
   
   /* Background styling */
-  background-image: url('hotpinkhero.png');
+  background-image: url('../images/hotpinkhero.png');
   background-size: cover;       /* Forces image to fill the screen */
   background-position: center;  /* Centers the image */
   background-repeat: no-repeat;
