@@ -20,10 +20,10 @@ const heroData = {
 const splitData = [
   {
     type: 'left',
-    image: ' /Users/noname/vs code -landing website html js css/images/email mockup.png',
+    image: 'images/email mockup.png',
     alt: 'Beauty Statute Product',
     title: 'About Me!',
-    description: 'Marketing professional with experience in social media marketing, analytics, and search optimization. I love combine data and branding to create a unipe and dythimic marketing campging .',
+    description: 'Marketing professional with experience in social media marketing, analytics, and search optimization. I love combine data and branding to create a unipe and dythimic marketing ca[...]
     buttonText: 'See My Work',
     buttonLink: '#work-four-target'
   },
@@ -32,9 +32,9 @@ const splitData = [
     image: 'images/email mockup1.png',
     alt: 'Product Image',
     title: 'Services',
-    description: 'I bridge the gap between creative strategy and data analytics to build high-converting content pipelines, ensuring compelling visual storytelling and a cohesive brand presence across Instagram, Facebook, LinkedIn, and TikTok.',
+    description: 'I bridge the gap between creative strategy and data analytics to build high-converting content pipelines, ensuring compelling visual storytelling and a cohesive brand presence ac[...]
     buttonText: 'Book Me',
-    buttonLink: ' https://cindyrmarketing.setmore.com/cindyr'
+    buttonLink: 'https://cindyrmarketing.setmore.com/cindyr'
   }
 ];
 const featuredSectionTitle = "Featured";
@@ -70,8 +70,8 @@ const whatInMyBagData = {
   title: "What's In My Tool Bag?",
   bagImage: 'images/whatinmypurseanimation/Bag.png',
   items: [
-    { src: 'images/whats in my bag/1.png', alt: 'Item 2' }, // Fixed local path
-    { src: 'images/whats in my bag/2.png', alt: 'Item 3' }, // Fixed local path
+    { src: 'images/whats in my bag/1.png', alt: 'Item 2' },
+    { src: 'images/whats in my bag/2.png', alt: 'Item 3' },
     { src: 'images/whatinmypurseanimation/4.png', alt: 'Item 4' },
     { src: 'images/whats in my bag/4.png', alt: 'Item 5' },
     { src: 'images/whatinmypurseanimation/3.png', alt: 'Item 6' }
@@ -217,7 +217,7 @@ function animateBagItemsOnScroll() {
   
   
   
- 
+  
   
   
   
@@ -328,7 +328,7 @@ function renderNativeGrid(targetId, sectionClass, containerClass, sectionTitle, 
 }
 
  renderNativeGrid('work-four-target', 'work-section-four', 'grid-container-4', featuredSectionTitle, workFourData);
- 
+  
 // --- Global Footer ---
 const footerTarget = document.getElementById('global-footer-target');
 const footer = createNode('footer', { className: 'site-footer' });
