@@ -89,13 +89,10 @@
 
 /* ==========================================================================
    1. STYLING RESET & OVERRIDES
-   I used negative margins combined with a calculated width to break the hero out of the main container's padding constraints.
+ 
+ 
 
-Here's what I added to .hero-section:
-
-
-Your main container has padding: 0 2rem; which constrains all child elements. The negative margins "pull" the hero section outside those padding boundaries, and the width calculation accounts for that extra space.
-
+ 
 
    ========================================================================== */
 * {
@@ -188,7 +185,7 @@ main {
   margin-right: -2rem;
   
   /* Background styling */
-  background-image: url('/Users/noname/vs code -landing website html js css/images/Destination PH Wedding Website PH in Brown Beige Olive Green Classic Minimalist Style.png');
+  background-image: url('hotpinkhero.png');
   background-size: cover;       /* Forces image to fill the screen */
   background-position: center;  /* Centers the image */
   background-repeat: no-repeat;
