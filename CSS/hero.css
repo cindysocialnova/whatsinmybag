@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&display=swap');
+
+@font-face {
+  font-family: 'PPNeueMontreal-Extrabold';
+  src: url('/fonts/PPNeueMontreal-Extrabold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Righteous';
+  src: url('fonts/fontsh/Righteous/Righteous-Regular.ttf') format('truetype');
+  font-weight: 800; 
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ==========================================================================
+   HERO DISPLAY CONTAINER
+   ========================================================================== */
+.hero-section {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 1rem;
+  width: calc(100% + 4rem);
+  margin-left: -2rem;
+  margin-right: -2rem;
+  background-image: url(' /Users/noname/vs code -landing website html js css/images/hotpink.png ');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: 2;
+  scroll-margin-top: 85px;
+}
+
+.hero-content {
+  max-width: 100%;
+  min-height: auto;
+  overflow: hidden;
+}
+
+.hero-content h1 {
+  font-family: 'Ballet', cursive;
+  font-size: 10rem;
+  font-weight: 400;
+  color: #f3dfdf;
+  line-height: 1.6;
+  padding: 0.5rem 2rem;
+  display: block;
+  overflow: visible;
+  letter-spacing: -0.02em; /* Tweak this number to fit your eye */
+  word-spacing: 1.0rem;   /* Forces breathing room strictly between words */
+}
+
+.hero-content p {
+  font-family: 'Cinzel', serif;
+  font-size: 1.3rem;
+  margin-bottom: 2.5rem;
+  color: #ffffff;
+
+ 
+}
+
+.hero-cta {
+  font-family: 'Cinzel', serif;
+  display: inline-block;
+  text-decoration: none;
+  background-color: #d5c1c1;
+  color: #ffffff;
+  padding: 1rem 2.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.hero-cta:hover {
+  font-family: 'Cinzel', serif;
+  background-color: #dfcece;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content h1 { 
+    font-size: 2.5rem; 
+  }
+  .hero-content p { 
+    font-size: 1.1rem; 
+  }
+}

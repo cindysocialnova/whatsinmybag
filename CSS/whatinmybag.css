@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* Fixed: Added missing @ symbol */
+@font-face {
+  font-family: 'Cinzel';
+  src: url('fonts/fontsh/Cinzel/static/Cinzel-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ==========================================================================
+   WHAT'S IN MY BAG - GLOBAL SECTION SETUP
+   ========================================================================== */
+
+.whatinmybag-section {
+  position: relative;
+height: 700px; /* Crucial: Locks the desktop height to a normal section size */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  background: #fde2e7;
+  overflow: visible; /* Fixed: Allowing items to burst out of section boundaries */
+}
+   
+.whatinmybag-container {
+  position: relative;
+  width: 100%;
+  height: 600px; 
+  overflow: visible; /* CRITICAL: Prevents any element clipping */
+}
+Section Title */
+.whatinmybag-title {
+  font-family: 'Cinzel', serif;
+  position: absolute;
+  top: 40px; /* CHANGED: Moved down from -30px so it sits safely inside the pink background box */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: #333333; /* Dark gray for sharp contrast against the pink background */
+  width: 100%;
+  z-index: 100; /* CHANGED: Forces it to stay completely on top of everything else */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Main Bag Layout */
+.bag-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50; /* Base midground alignment layer */
+  bottom: -120px;
+}
+
+/* Fixed: Changed class selector to target JS created nodes accurately */
+.bag-wrapper img {
+  width: 320px; /* Adjusted to balance desktop item proportions */
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.1));
+}
+
+/* Items Container Layout Matrix */
+.items-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  overflow: visible; /* CRITICAL: Allows items to explode out from the dead center */
+}
+
+/* Individual Items - Initial Stack Central Position */
+.bag-item {
+  position: absolute;
+  object-fit: contain;
+  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.15));
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+  z-index: 10;
+  
+  /* Isolates visual rendering pipeline straight to GPU for lag-free scroll response */
+  will-change: transform, opacity;
+}
+
+/* Base Dimension Footprints (Desktop Layout Scale) */
+.bag-item:nth-child(1) { width: 100px; height: 100px; }
+.bag-item:nth-child(2) { width: 110px; height: 110px; }
+.bag-item:nth-child(3) { width: 95px;  height: 110px; } 
+.bag-item:nth-child(4) { width: 105px; height: 105px; }
+.bag-item:nth-child(5) { width: 100px; height: 110px; }
+
+/* ==========================================================================
+   RESPONSIVE DESIGN SYSTEM MEDIA QUERIES (SEPARATED FOR MOBILE ANIMATIONS)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .whatinmybag-section {
+    min-height: 100vh;
+    padding: 40px 15px;
+    overflow: visible;
+  }
+  
+  .whatinmybag-container {
+    height: 450px; /* Balanced height for mobile animation paths */
+  }
+  
+  /* Scaled bag image down for mobile viewports */
+  .bag-wrapper img {
+    width: 200px;
+  }
+  
+  /* Adjusted mobile items bounding sizes to prevent overlap clipping */
+  .bag-item {
+    width: 70px !important;
+    height: 70px !important;
+  }
+  
+  .whatinmybag-title {
+    font-size: 1.8rem;
+    top: -50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .whatinmybag-container {
+    height: 380px;
+  }
+  
+  .bag-wrapper img {
+    width: 160px;
+  }
+  
+  .bag-item {
+    width: 55px !important;
+    height: 55px !important;
+  }
+  
+  .whatinmybag-title {
+    font-size: 1.4rem;
+    top: -40px;
+  }
+}

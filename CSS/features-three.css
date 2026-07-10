@@ -1,0 +1,56 @@
+/* --- Three Column Luxury Feature Section --- */
+.features-three-section {
+   padding: 60px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.features-three-container {
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  text-align: center;
+}
+
+/* Individual Feature Column */
+.feature-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+/* Editorial Serif Header Styling */
+.feature-column-title {
+  font-family: 'Ballet', cursive;
+  font-weight: 400;
+  font-size: 2.2rem;
+  color: #111111;
+  margin-bottom: 24px;
+  letter-spacing: 0.5px;
+}
+
+/* Clean, Readable Body text */
+.feature-column-desc {
+font-family: 'Playfair Display', serif; /* Changed Font */   font-size: 1rem;
+color: #666666;
+margin-bottom: 2rem;
+font-weight: 300;
+}
+
+/* Responsive Fluid Layout for tablets & mobile viewports */
+@media (max-width: 900px) {
+  .features-three-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  
+  .features-three-section {
+    padding: 60px 24px;
+  }
+}

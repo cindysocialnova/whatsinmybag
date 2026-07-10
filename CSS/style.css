@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&display=swap');
+
+@font-face {
+  font-family: 'Cinzel';
+  src: url('fonts/fontsh/Cinzel/static/Cinzel-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HerrVonMuellerhoff-Regular';
+  src: url('font/Bebas_Neue,Bodoni_Moda,Cinzel,Herr_Von_Muellerhoff,Righteous,etc') format(ttf),
+       url('/fonts/PPNeueMontreal-Extrabold.woff') format('woff');
+  font-weight: 500;
+  font-style: italic; /* Change to normal if using the upright version */
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'StyleScript';
+  src: url('fonts/ fontsh/Style_Script/StyleScript-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+ }
+
+
+
+
+
+
+@font-face {
+  font-family: 'WS-Paradox-Italic';
+  src: url('/fonts/WS-Paradox-Italic.woff2') format('woff2'),
+       url('/fonts/WS-Paradox-Italic.woff') format('woff');
+  font-weight: 400; /* Or 700, depending on if you are using the regular or bold italic */
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+    font-family: 'ws_paradoseitalic'; /* The converter cleans up the name */
+    src: url('ws_paradose-italic-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+}
+@font-face {
+  font-family: 'PPNeueMontreal-Book';
+  src: url('/fonts/PPNeueMontreal-Book.woff2') format('woff2'),
+       url('/fonts/PPNeueMontreal-Book.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+   
+   
+   
+
+
+/* Fixes the sticky nav heading overlap issue globally */
+#hero-target,
+#split-sections-target,
+#work-four-target,
+#work-six-target {
+  scroll-margin-top: 85px; 
+}
+ @font-face {
+   font-family: 'Righteous';
+   /* Use a relative path pointing to where the font lives relative to this CSS file */
+   src: url('fonts/ fontsh/Righteous') format('truetype');
+   font-weight: 800; 
+   font-style: normal;
+   font-display: swap;
+ }
+
+
+@font-face {
+  font-family: 'PPNeueMontreal-Book';
+  src: url('/fonts/PPNeueMontreal-Book.woff2') format('woff2'),
+       url('/fonts/PPNeueMontreal-Book.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+/* ==========================================================================
+   1. STYLING RESET & OVERRIDES
+   I used negative margins combined with a calculated width to break the hero out of the main container's padding constraints.
+
+Here's what I added to .hero-section:
+
+
+Your main container has padding: 0 2rem; which constrains all child elements. The negative margins "pull" the hero section outside those padding boundaries, and the width calculation accounts for that extra space.
+
+
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth; /* Glides beautifully between anchor selections */
+}
+
+body {
+font-family: "PPNeueMontreal-Extrabold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;  line-height: 1.6;
+  background-color: #fde2e7;
+  color: #333333;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+main {
+  max-width:auto  ;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+ 
+/* ==========================================================================
+   2. SITE FLOATING HEADER
+   ========================================================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #eeeeee;
+  
+}
+
+.header-container {
+  max-width: auto;
+  margin: 0 auto;
+  padding: 1.2rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #36350b;
+  
+ 
+}
+
+.header-container .logo {
+  font-weight: 800;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  color: #111111;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #555555;
+  font-weight: 500;
+  margin-left: 2rem;
+  transition: color 0.2s ease;
+}
+
+.nav-menu a:hover {
+  color: #111111;
+}
+
+/* ==========================================================================
+   3. HERO INTRO MODULE
+   ========================================================================== */
+   /* ==========================================================================
+   3. HERO DISPLAY CONTAINER
+   ========================================================================== */
+.hero-section { /* Fixed: Added the missing "." at the start */
+  position: relative; /* Added: Ensures z-index works correctly */
+  min-height: 80vh;   /* Changed from auto: Gives the hero section explicit height to show the image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 1rem;
+  
+  /* Full width styling */
+  width: calc(100% + 4rem);
+  margin-left: -2rem;
+  margin-right: -2rem;
+  
+  /* Background styling */
+  background-image: url('/Users/noname/vs code -landing website html js css/images/Destination PH Wedding Website PH in Brown Beige Olive Green Classic Minimalist Style.png');
+  background-size: cover;       /* Forces image to fill the screen */
+  background-position: center;  /* Centers the image */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: 2;
+} /* Fixed: Added missing closing bracket */
+
+
+
+
+.hero-content {
+  max-width: 100%;
+  min-height: auto;
+  overflow: hidden;
+  }
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+.hero-content h1 {
+  font-family: 'Ballet', cursive;
+  font-size: 4rem; /* Makes that gorgeous script stand out */
+  font-weight: 400; /* Ballet is a script font and typically only has a regular weight */
+  color: #f3dfdf;
+  line-height: 1.6;        /* Gives vertical space so the tops/bottoms don't clip */
+  padding: 0.5rem 2rem;    /* Gives horizontal space so the start/end loops don't clip */
+  display: block;          /* Ensures the padding applies correctly */
+  overflow: visible;
+}
+
+ 
+.hero-content p {
+  font-family: "PPNeueMontreal-Extrabold", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1.3rem;
+   margin-bottom: 2.5rem;
+}
+
+.hero-cta {
+  font-family: 'Righteous', sans-serif; /* Cleaned up the nested quotes here */
+  display: inline-block;
+  text-decoration: none;
+  background-color: #111111;
+  color: #ffffff;
+  padding: 1rem 2.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.hero-cta {
+  font-family: 'Righteous', sans-serif; /* Cleaned up the nested quotes here */
+  display: inline-block;
+  text-decoration: none;
+  background-color: #111111;
+  color: #ffffff;
+  padding: 1rem 2.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.hero-cta:hover {
+  background-color: #333333;
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   4. DYNAMIC SPLIT MODULES (Flexbox)
+   ========================================================================== */
+.split-left, 
+.split-right {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  padding: 6rem 0;
+}
+
+.split-left .text-block, .split-left .image-block,
+.split-right .text-block, .split-right .image-block {
+  flex: 1;
+}
+
+.text-block h2 {
+  font-family: 'Ballet';
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #111111;
+  letter-spacing: -0.5px;
+}
+
+.text-block p {
+  font-family: 'Cinzel', serif;
+  font-size: 1.1rem;
+  color: #555555;
+}
+
+.image-block img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+/* ==========================================================================
+   5. WORK REUSABLE GRIDS & CLICK CARDS (CSS Grid)
+   ========================================================================== */
+.work-section-four
+ {
+  padding: 6rem 0;
+}
+
+.work-section-four h2, 
+ {
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 2px solid #eeeeee;
+  padding-bottom: 1rem;
+  color: #111111;
+}
+
+.grid-container-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+}
+
+
+.project-card {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+  transition: transform 0.25s cubic-bezier(0.25, 1, 0.5, 1), 
+              box-shadow 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+.project-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3; /* Forces equal layout boxes regardless of uploaded sizing */
+  object-fit: cover;
+  background-color: #eaeaea;
+}
+
+.project-card h3 {
+  font-size: 1.15rem;
+  padding: 1.2rem 1.2rem 0.4rem 1.2rem;
+  color: #111111;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  padding: 0 1.2rem 1.5rem 1.2rem;
+  color: #666666;
+}
+
+/* ==========================================================================
+   6. SITE FOOTER BAR
+   ========================================================================== */
+.site-footer {
+  background-color: #111111;
+  color: #888888;
+  padding: 3rem 2rem;
+  margin-top: 4rem;
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+.footer-socials a {
+  color: #888888;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  transition: color 0.2s ease;
+}
+
+.footer-socials a:hover {
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   7. COLLAPSIBLE MEDIA QUERIES (Responsive System)
+   ========================================================================== */
+ 
+ 
+@media (max-width: 900px) {
+  .grid-container-4 {
+    grid-template-columns: repeat(2, 1fr); /* Collapse 4-grid to 2 columns */
+  }
+  .split-left, .split-right {
+    gap: 3rem;
+    padding: 4rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 { font-size: 2.5rem; }
+  .hero-content p { font-size: 1.1rem; }
+  
+  .split-left, .split-right {
+    flex-direction: column; /* Force splits to vertical stacking columns */
+    text-align: center;
+  }
+  
+  .header-container, .footer-container {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  .nav-menu a { margin: 0 1rem; }
+  .footer-socials a { margin: 0 0.75rem; }
+}
+
+@media (max-width: 550px) {
+  main { padding: 0 1rem; }
+  .grid-container-4, .grid-container-6 {
+    grid-template-columns: 1fr; /* Complete fallback collapse into single cards line */
+    gap: 1.5rem;
+  }
+  .text-block h2 { font-size: 2rem; }
+}

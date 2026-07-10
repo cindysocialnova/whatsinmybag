@@ -1,0 +1,94 @@
+@font-face {
+  font-family: 'Cinzel';
+  src: url('fonts/fontsh/Cinzel/static/Cinzel-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&display=swap');
+
+@font-face {
+  font-family: 'PPNeueMontreal-Extrabold';
+  src: url('/fonts/PPNeueMontreal-Extrabold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ==========================================================================
+   WORK SIX GRID (CSS Grid - 6 Columns)
+   ========================================================================== */
+.work-section-six {
+  padding: 6rem 0;
+  scroll-margin-top: 85px;
+}
+
+.work-section-six h2 {
+  display: none;
+}
+
+.grid-container-6 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.5rem;
+}
+
+.project-card {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+  transition: transform 0.25s cubic-bezier(0.25, 1, 0.5, 1), 
+              box-shadow 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+.project-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background-color: #eaeaea;
+}
+
+.project-card h3 {
+  font-family: 'Ballet', cursive;
+  font-size: 1.15rem;
+  padding: 1.2rem 1.2rem 0.4rem 1.2rem;
+  color: #111111;
+}
+
+.project-card p {
+  font-family: 'Cinzel', serif;
+  font-size: 0.95rem;
+  padding: 0 1.2rem 1.5rem 1.2rem;
+  color: #666666;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .grid-container-6 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .grid-container-6 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .grid-container-6 {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}

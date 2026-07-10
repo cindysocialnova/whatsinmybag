@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@font-face {
+  font-family: 'Cinzel';
+  src: url('fonts/fontsh/Cinzel/static/Cinzel-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ==========================================================================
+   DYNAMIC SPLIT MODULES (Flexbox)
+   ========================================================================== */
+.split-left, 
+.split-right {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 0;
+  margin: 0;
+  scroll-margin-top: 55px;
+  min-height: 300px;
+  background-color: #fde2e7;
+}
+
+.split-left .text-block, 
+.split-left .image-block,
+.split-right .text-block, 
+.split-right .image-block {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.split-left .text-block,
+.split-right .text-block {
+  padding: 4rem 3rem;
+  text-align: center;
+}
+
+.text-block h2 {
+  font-family: 'Ballet', cursive;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: #111111;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  word-spacing: 1.0rem;   /* Forces breathing room strictly between words */
+
+}
+
+.text-block p {
+   font-family: 'Playfair Display', serif; /* Changed Font */   font-size: 1rem;
+  color: #666666;
+  margin-bottom: 2rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.split-button {
+  font-family: 'Cinzel', serif;
+  display: inline-block;
+  text-decoration: none;
+  background-color: #675757;
+  color: #ffffff;
+  padding: 0.8rem 2rem;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  letter-spacing: 0.5px;
+}
+
+.split-button:hover {
+  background-color: #333333;
+  transform: translateY(-2px);
+}
+
+.image-block {
+  overflow: hidden;
+
+}
+
+.image-block img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .split-left, 
+  .split-right {
+    min-height: 500px;
+  }
+  
+  .split-left .text-block,
+  .split-right .text-block {
+    padding: 3rem 2rem;
+  }
+  
+  .text-block h2 { 
+    font-size: 2.5rem; 
+  }
+}
+
+@media (max-width: 768px) {
+  .split-left, 
+  .split-right {
+    flex-direction: column;
+    min-height: auto;
+  }
+  
+  .split-left .text-block, 
+  .split-left .image-block,
+  .split-right .text-block, 
+  .split-right .image-block {
+    width: 100%;
+  }
+  
+  .image-block {
+    min-height: 350px;
+  }
+  
+  .text-block h2 { 
+    font-size: 2rem; 
+  }
+}
