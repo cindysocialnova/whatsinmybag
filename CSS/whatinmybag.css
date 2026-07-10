@@ -11,12 +11,12 @@
 }
 
 /* ==========================================================================
-   WHAT'S IN MY BAG - GLOBAL SECTION SETUP
-   ========================================================================== */
+    WHAT'S IN MY BAG - GLOBAL SECTION SETUP
+    ========================================================================== */
 
 .whatinmybag-section {
   position: relative;
-height: 700px; /* Crucial: Locks the desktop height to a normal section size */
+  height: 700px; /* Crucial: Locks the desktop height to a normal section size */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,7 +31,8 @@ height: 700px; /* Crucial: Locks the desktop height to a normal section size */
   height: 600px; 
   overflow: visible; /* CRITICAL: Prevents any element clipping */
 }
-Section Title */
+
+/* Section Title */
 .whatinmybag-title {
   font-family: 'Cinzel', serif;
   position: absolute;
@@ -101,8 +102,8 @@ Section Title */
 .bag-item:nth-child(5) { width: 100px; height: 110px; }
 
 /* ==========================================================================
-   RESPONSIVE DESIGN SYSTEM MEDIA QUERIES (SEPARATED FOR MOBILE ANIMATIONS)
-   ========================================================================== */
+    RESPONSIVE DESIGN SYSTEM MEDIA QUERIES (SEPARATED FOR MOBILE ANIMATIONS)
+    ========================================================================== */
 
 @media (max-width: 768px) {
   .whatinmybag-section {

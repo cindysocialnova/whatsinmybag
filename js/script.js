@@ -23,7 +23,7 @@ const splitData = [
     image: 'images/email mockup.png',
     alt: 'Beauty Statute Product',
     title: 'About Me!',
-    description: 'Marketing professional with experience in social media marketing, analytics, and search optimization. I love combine data and branding to create a unipe and dythimic marketing ca[...]
+    description: 'Marketing professional with experience in social media marketing, analytics, and search optimization. I love combine data and branding to create a unipe and dythimic marketing ca[...]',
     buttonText: 'See My Work',
     buttonLink: '#work-four-target'
   },
@@ -32,7 +32,7 @@ const splitData = [
     image: 'images/email mockup1.png',
     alt: 'Product Image',
     title: 'Services',
-    description: 'I bridge the gap between creative strategy and data analytics to build high-converting content pipelines, ensuring compelling visual storytelling and a cohesive brand presence ac[...]
+    description: 'I bridge the gap between creative strategy and data analytics to build high-converting content pipelines, ensuring compelling visual storytelling and a cohesive brand presence ac[...]',
     buttonText: 'Book Me',
     buttonLink: 'https://cindyrmarketing.setmore.com/cindyr'
   }
@@ -42,25 +42,25 @@ const workFourData = [
   { 
     title: 'Pixe Vintage ', 
     desc: 'Design & Social Media ', 
-    img: 'images/WORK COVER/10.png',
+    img: 'images/WORK COVER/vintagepixe.png',
     link: 'https://cafelovelatte.my.canva.site/portfolio-girls-' 
   },
   { 
     title: 'Luxe & Co', 
     desc: 'Design & Social Media', 
-    img: 'images/WORK COVER/3.png',
+    img: 'images/WORK COVER/luxeco.png',
     link: 'https://theedit.my.canva.site/luxeandco' 
   },
   { 
     title: 'Social Nova', 
     desc: 'Data Analaytics', 
-    img: 'images/WORK COVER/9.png',
+    img: 'images/WORK COVER/dashandreport.png',
     link: 'https://datastudio.google.com/s/hg9OTuedWmI'
   },
   { 
     title: 'Luxe & Co', 
     desc: 'Data Analaytics.', 
-    img: 'images/WORK COVER/2.png',
+    img: 'images/WORK COVER/churnreport.png',
     link: 'https://medium.com/@Cindy.R/case-study-luxe-co-facebook-follower-retention-analysis-4ddaad2d37a3' 
   }
 ];
@@ -68,13 +68,13 @@ const workFourData = [
 
 const whatInMyBagData = {
   title: "What's In My Tool Bag?",
-  bagImage: 'images/whatinmypurseanimation/Bag.png',
+  bagImage: 'images/whatinmypurseanimation/bigbag.png',
   items: [
-    { src: 'images/whats in my bag/1.png', alt: 'Item 2' },
-    { src: 'images/whats in my bag/2.png', alt: 'Item 3' },
-    { src: 'images/whatinmypurseanimation/4.png', alt: 'Item 4' },
-    { src: 'images/whats in my bag/4.png', alt: 'Item 5' },
-    { src: 'images/whatinmypurseanimation/3.png', alt: 'Item 6' }
+    { src: 'images/whats in my bag/Pslogo.png', alt: 'Photoshop' },
+    { src: 'images/whats in my bag/Sqllogo.png', alt: 'SQL' },
+    { src: 'images/whatinmypurseanimation/cam.png', alt: 'Camera' },
+    { src: 'images/whats in my bag/hubspot.png', alt: 'HubSpot' },
+    { src: 'images/whatinmypurseanimation/keyboard.png', alt: 'Keyboard' }
   ]
 };
 
@@ -228,42 +228,41 @@ function animateBagItemsOnScroll() {
   
   
   
-  
-      
-      // Separate base displacement math for mobile vs desktop
-      // Mobile clears a smaller bag flap (-90px vs -130px)
-      const baseHeightClearance = isMobile ? -90 : -130;
+       
+       // Separate base displacement math for mobile vs desktop
+       // Mobile clears a smaller bag flap (-90px vs -130px)
+       const baseHeightClearance = isMobile ? -90 : -130;
 
-      if (eased <= 0.35) {
-        const initialLiftFactor = eased / 0.35;
-        currentY = baseHeightClearance * initialLiftFactor;
-      } else {
-        const secondaryFactor = (eased - 0.35) / 0.65;
-        currentX = offset.x * secondaryFactor;
-        currentY = baseHeightClearance + (offset.y - baseHeightClearance) * secondaryFactor;
-        currentRotation = offset.r * secondaryFactor;
-      }
-      
-      // Scale down items slightly more on mobile to prevent overlap
-      const baseScale = isMobile ? 0.35 : 0.5;
-      const scaleMultiplier = isMobile ? 0.45 : 0.5;
-      const scale = baseScale + (eased * scaleMultiplier); 
-      
-      item.style.opacity = Math.min(1, eased * 2.5);
-      
-      item.style.zIndex = eased < 0.15 ? "10" : "60";
-      
-      item.style.transform = `translate(calc(-50% + ${currentX}px), calc(-50% + ${currentY}px)) scale(${scale}) rotate(${currentRotation}deg)`;
-    });
-  }
-  
-  window.addEventListener('scroll', updateItemPositions);
-  // Recalculate offsets if phone shifts from portrait to landscape
-  window.addEventListener('resize', () => {
-    animateBagItemsOnScroll(); 
-  });
+       if (eased <= 0.35) {
+         const initialLiftFactor = eased / 0.35;
+         currentY = baseHeightClearance * initialLiftFactor;
+       } else {
+         const secondaryFactor = (eased - 0.35) / 0.65;
+         currentX = offset.x * secondaryFactor;
+         currentY = baseHeightClearance + (offset.y - baseHeightClearance) * secondaryFactor;
+         currentRotation = offset.r * secondaryFactor;
+       }
+       
+       // Scale down items slightly more on mobile to prevent overlap
+       const baseScale = isMobile ? 0.35 : 0.5;
+       const scaleMultiplier = isMobile ? 0.45 : 0.5;
+       const scale = baseScale + (eased * scaleMultiplier); 
+       
+       item.style.opacity = Math.min(1, eased * 2.5);
+       
+       item.style.zIndex = eased < 0.15 ? "10" : "60";
+       
+       item.style.transform = `translate(calc(-50% + ${currentX}px), calc(-50% + ${currentY}px)) scale(${scale}) rotate(${currentRotation}deg)`;
+     });
+   }
+   
+   window.addEventListener('scroll', updateItemPositions);
+   // Recalculate offsets if phone shifts from portrait to landscape
+   window.addEventListener('resize', () => {
+     animateBagItemsOnScroll(); 
+   });
 
-  updateItemPositions();
+   updateItemPositions();
 }
 
 animateBagItemsOnScroll();

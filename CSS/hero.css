@@ -17,8 +17,8 @@
 }
 
 /* ==========================================================================
-   HERO DISPLAY CONTAINER
-   ========================================================================== */
+    HERO DISPLAY CONTAINER
+    ========================================================================== */
 .hero-section {
   position: relative;
   min-height: 80vh;
@@ -30,7 +30,7 @@
   width: calc(100% + 4rem);
   margin-left: -2rem;
   margin-right: -2rem;
-  background-image: url(' /Users/noname/vs code -landing website html js css/images/hotpink.png ');
+  background-image: url('images/hotpinkhero.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

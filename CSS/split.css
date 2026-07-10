@@ -9,8 +9,8 @@
 }
 
 /* ==========================================================================
-   DYNAMIC SPLIT MODULES (Flexbox)
-   ========================================================================== */
+    DYNAMIC SPLIT MODULES (Flexbox)
+    ========================================================================== */
 .split-left, 
 .split-right {
   display: flex;
@@ -52,7 +52,8 @@
 }
 
 .text-block p {
-   font-family: 'Playfair Display', serif; /* Changed Font */   font-size: 1rem;
+  font-family: 'Playfair Display', serif; /* Changed Font */
+  font-size: 1rem;
   color: #666666;
   margin-bottom: 2rem;
   font-weight: 300;

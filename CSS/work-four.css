@@ -7,6 +7,7 @@
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 @font-face {
   font-family: 'PPNeueMontreal-Extrabold';
@@ -17,8 +18,8 @@
 }
 
 /* ==========================================================================
-   WORK FOUR GRID (CSS Grid - 4 Columns)
-   ========================================================================== */
+    WORK FOUR GRID (CSS Grid - 4 Columns)
+    ========================================================================== */
 
 
 
@@ -75,7 +76,7 @@
 }
 
 .project-card p {
-font-family: 'Playfair Display', serif; /* Changed Font */   font-size: 1rem;
+  font-family: 'Playfair Display', serif; /* Changed Font */
   font-size: 0.95rem;
   padding: 0 1.2rem 1.5rem 1.2rem;
   color: #666666;
