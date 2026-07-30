@@ -23,7 +23,7 @@ const splitData = [
     image: 'images/email mockup.png',
     alt: 'Beauty Statute Product',
     title: 'About Me!',
-    description: 'Marketing professional with experience in social media marketing, analytics, and search engine optimization. I love combining data and branding to create unique and dynamic marketing campaigns.'
+    description: 'Marketing professional with experience in social media marketing, analytics, and search engine optimization. I love combining data and branding to create unique and dynamic marketing campaigns.',
     buttonText: 'See My Work',
     buttonLink: '#work-four-target'
   },
@@ -32,7 +32,7 @@ const splitData = [
     image: 'images/email mockup1.png',
     alt: 'Product Image',
     title: 'Services',
-    description: 'I bridge the gap between creative strategy and data analytics to build high-converting content pipelines, ensuring compelling visual storytelling and a cohesive brand presence.'
+    description: 'I bridge the gap between creative strategy and data analytics to build high-converting content pipelines, ensuring compelling visual storytelling and a cohesive brand presence.',
     buttonText: 'Book Me',
     buttonLink: 'https://cindyrmarketing.setmore.com/cindyr'
   }
