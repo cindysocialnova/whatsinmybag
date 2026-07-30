@@ -43,7 +43,7 @@ const workFourData = [
     title: 'Pixe Vintage ', 
     desc: 'Design & Social Media ', 
     img: 'images/WORK COVER/vintagepixe.png',
-    link: 'https://cafelovelatte.my.canva.site/portfolio-girls-' 
+    link: 'https://cafelovelatte.my.canva.site/portfolio-girls-night-vintage' 
   },
   { 
     title: 'Luxe & Co', 
